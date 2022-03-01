@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./birthday.css">
+    </head>
+    <body>
+        <div class="greet">
+            <button onclick="document.location='./wish.html'">Send a wish...</button>
+        </div>
+    <h2 class="speach">If you are reading this it must be your birthday</h2>
+    <h1 class="speach">HAPPY BIRTHDAY</h1>
+    <h4 class="new">Here are a couple of birthday wishes</h4>
+    <hr>
+    <h1>WISHES</h1>
+    <div id="demo"></div>
+    <script type="text/javascript"> 
+        var y = localStorage.length;
+        var x ="", i;
+        for (i=0; i<y; i++){
+            let message = localStorage.getItem("msg"+i);
+            if(i%2==0){
+                x = x + "<h3" + ">From🥳: "+ message + "</h3" + ">";
+            }
+            if(i%2==1){
+                x = x + "<h5" + ">Wish: "+ message + "</h5" + ">";
+            }
+        }
+
+        document.getElementById("demo").innerHTML = x;
+    </script>
+    </body>
+</html>
