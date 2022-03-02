@@ -4,7 +4,7 @@ function send(name,wishes){
     localStorage.setItem("msg"+i, name);
     i++;
    localStorage.setItem("msg"+i, wishes);
-    window.open('./card.html').send(name,wishes)
+    window.open('./index.html').send(name,wishes)
     
 }
 
